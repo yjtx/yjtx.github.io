@@ -54,19 +54,13 @@ sidebar-avatar: /img/avatar-yjtx.jpg     # use absolute URL.
 # Friends
 friends: [
     {
-        title: "FeatherJ",
-        href: "http://featherj.org/"
-    },{
         title: "xsstomy",
         href: "http://xsstomy.com/"
     },{
         title: "Dom",
         href: "http://blog.domlib.com/"
     },{
-        title: "纸片儿",
-        href: "http://xzper.com/"
-    },{
-        title: "城市拓荒者",
-        href: "http://city-10.com/"
+        title: "yjtx-test",
+        href: "http://yjtxlib.com/yjtx-test/main.html"
     }
 ]
