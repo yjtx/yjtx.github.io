@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=200"/>
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="css/style-min.css"/>
+</head>
+<body>
+
+<div style="position: absolute; left: 0px; top: 0px; right:0px;">
+    <ul id="items_ul">
+    </ul>
+</div>
+
+<div style="position:fixed;right: 0px;z-index: 999;text-align: right;">
+    <select id="input_size">
+        <option value=1>正常大小</option>
+        <option value=2>缩小一半</option>
+    </select>
+    <br/>
+    <select id="input_iframe">
+        <option value="default">默认</option>
+        <option value="iframe">iframe</option>
+    </select>
+    <br/>
+    <button id="btn">清理
+    </button>
+    <br/>
+</div>
+<script src="css/Utils.js"></script>
+
+<script src="old/CoreTest/Core.js"></script>
+<script src="old/GuiTest/Gui.js"></script>
+
+<script src="dirty/CoreTest/Core.js"></script>
+<script src="dirty/EuiTest/Eui.js"></script>
+<script src="dirty/Eui/Eui.js"></script>
+<script src="dirty/GuiTest/Gui.js"></script>
+
+<script src="HtmlTest/Html.js"></script>
+<script src="egret-examples.js"></script>
+
+<script>
+    btn.onclick = function () {
+        var href = window.location.href;
+        if (href.indexOf("#") >= 0) {
+            href = href.substring(0, href.indexOf("#"));
+        }
+        if (href.indexOf("?") >= 0) {
+            href = href.substring(0, href.indexOf("?"));
+        }
+        window.location.href = href + "?r=" + Math.random();
+    };
+
+    ex();
+
+</script>
+
+</body>
+</html>
