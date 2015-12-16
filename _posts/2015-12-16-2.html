@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    var requestAnimationFrame =
+            window["requestAnimationFrame"] ||
+            window["webkitRequestAnimationFrame"] ||
+            window["mozRequestAnimationFrame"] ||
+            window["oRequestAnimationFrame"] ||
+            window["msRequestAnimationFrame"];
+
+    if (!requestAnimationFrame) {
+        requestAnimationFrame = function (callback) {
+            return window.setTimeout(callback, 1000 / 60);
+        };
+    }
+
+    requestAnimationFrame.call(window, onTick);
+    var t = 0;
+    function onTick() {
+        t++;
+        console.log("t " + t);
+
+        if (t > 100) {
+            return;
+        }
+        requestAnimationFrame.call(window, onTick)
+    }
+</script>
+
+<script>
+    var count = 0;
+    console.log("count " + count + "  " + Date.now());
+
+    function send() {
+        count++;
+        console.log("count " + count + "  " + Date.now());
+        if (count >= 100) {
+            return;
+        }
+        setTimeout(function () {
+            send();
+        }, 0);
+    }
+
+    send();
+</script>
+
+</body>
+</html>
