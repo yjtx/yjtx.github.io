@@ -63,5 +63,8 @@ friends: [
     },{
         title: "yjtx-test",
         href: "http://yjtxlib.com/yjtx-test/main.html"
+    },{
+        title: "egret-api",
+        href: "http://yjtxlib.com/yjtx-egret-api/test/"
     }
 ]
