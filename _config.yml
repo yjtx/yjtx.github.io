@@ -9,8 +9,8 @@ motto: "sky king cover ground tiger, precious tower shock river monster."
 
 
 # SNS settings
-RSS: true
-# weibo_username:     yjtx
+# RSS: true
+weibo_username:     yjtx
 zhihu_username:     yjtx
 github_username:    yjtx
 #twitter_username:  
@@ -36,8 +36,8 @@ kramdown:
 
 # Duoshuo settings
 # please set your own DuoShuo account in `post.html` and `about.html`
-useDuoshuo: true    # use both Comment and Share
-useShare: true      # use Comment only. seeing the Share component is depend on Comment so we can NOT use share only.
+useDuoshuo: false    # use both Comment and Share
+useShare: false      # use Comment only. seeing the Share component is depend on Comment so we can NOT use share only.
 
 
 # Todo: Analysis settings
