@@ -6,7 +6,6 @@ description: ""
 baseurl: ""
 url: "http://yjtx"
 motto: "sky king cover ground tiger, precious tower shock river monster."
-path: "projects"
 
 
 # SNS settings
@@ -20,9 +19,10 @@ github_username:    yjtx
 
 # Build settings
 highlighter: pygments
-permalink: /articles/:title.html
+permalink: /_posts/:title.html
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","LICENSE","Gemfile","Gemfile.lock"]
+include: ["_posts"]
 anchorjs: true      # if you want to customize anchor. check out line:129 of `post.html`
 
 # Markdown settings
