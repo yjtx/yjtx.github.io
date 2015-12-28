@@ -141,7 +141,10 @@ pre,
 .post-container a:focus {
   color: #0085a1;
 }
-.post-container ul,
+.post-container ul {
+  margin-top:10px;
+  margin-bottom: 0px;
+}
 .post-container ol {
   margin-bottom: 40px;
 }
