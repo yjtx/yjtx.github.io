@@ -3,7 +3,7 @@ author: yjtx
 date: 2016-02-25 10:07:39+00:00
 layout: post
 title: Type Script 的类型
-pid: 4
+pid: 12
 tags:
 - 博客
 - Type Script 的类型

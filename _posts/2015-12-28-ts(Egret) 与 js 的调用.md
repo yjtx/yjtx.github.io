@@ -3,7 +3,7 @@ author: yjtx
 date: 2015-12-28 10:07:39+00:00
 layout: post
 title: ts(Egret) 与 js 的调用
-pid: 4
+pid: 9
 tags:
 - 博客
 - ts(Egret) 与 js 的调用
