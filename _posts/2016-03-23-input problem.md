@@ -1,9 +1,9 @@
 ---
 author: yjtx
-date: 2016-03-23 10:07:39+00:00
+date: 2016-03-22 11:07:39+00:00
 layout: post
 title: egret 2.5 及以上输入框被盖住的规避方法
-pid: 23
+pid: 31
 tags:
 - 博客
 - egret 2.5 及以上输入框被盖住的规避方法
