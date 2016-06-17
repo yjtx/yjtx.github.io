@@ -1,0 +1,10 @@
+<div class="friends">
+    <h2>好友链接</h2>
+    <ul>
+        {% if site.friends %}
+            {% for friend in site.friends %}
+                <a target="_blank" href="{{friend.href}}">{{friend.title}}</a>
+            {% endfor %}
+        {% endif %}
+    </ul>
+</div>

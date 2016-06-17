@@ -1,0 +1,12 @@
+<div class="tags">
+    <h2>标签</h2>
+        {% for tag in site.tags %}
+            <!--{% if tag[1].size > 1 %}-->
+                <a href="/navbar/tags.html#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                    {{ tag[0] }}
+                </a>
+            <!--{% endif %}-->
+        {% endfor %}
+
+        
+</div>

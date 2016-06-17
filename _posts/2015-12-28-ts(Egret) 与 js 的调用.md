@@ -5,8 +5,7 @@ layout: post
 title: ts(Egret) 与 js 的调用
 pid: 9
 tags:
-- 博客
-- ts(Egret) 与 js 的调用
+- ts
 ---
 
 

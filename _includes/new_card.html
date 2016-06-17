@@ -1,0 +1,72 @@
+
+        <div class="card">
+            <h1>我的名片</h1>
+
+            <p>网名：yjtx</p>
+
+            <p>职业：一代码农</p>
+
+            <p>电话：15001052086</p>
+
+            <p>Email：huanghaiying@egret.com</p>
+            <ul class="linkmore">
+                <li>
+                    <a href="/" class="talk" title="给我留言"></a>
+                </li>
+                <li>
+                    <a href="/" class="address" title="联系地址"></a>
+                </li>
+                <li>
+                    <a href="/" class="email" title="给我写信"></a>
+                </li>
+                <li>
+                    <a href="/" class="photos" title="生活照片"></a>
+                </li>
+                </li>
+            </ul>
+            <ul class="linkmore">
+                {% if site.RSS %}
+                            <li>
+                                <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if site.twitter_username %}
+                            <li>
+                                <a href="https://twitter.com/{{ site.twitter_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if site.zhihu_username %}
+                            <li>
+                                <a href="https://www.zhihu.com/people/{{ site.zhihu_username }}" class="zhihu" title="知乎"></a>
+                            </li>
+                            {% endif %}
+                            {% if site.weibo_username %}
+                            <li>
+                                <a href="http://weibo.com/{{ site.weibo_username }}" class="weibo" title="微博"></a>
+                            </li>
+                            {% endif %}
+                            {% if site.facebook_username %}
+                            <li>
+                                <a href="https://www.facebook.com/{{ site.facebook_username }}" class="facebook" title="facebook"></a>
+                            </li>
+                            {% endif %}
+                            {% if site.github_username %}
+                            <li>
+                                <a href="https://github.com/{{ site.github_username }}" class="github" title="github"></a>
+                            </li>
+                            {% endif %}
+
+            </ul>
+
+           
+        </div>

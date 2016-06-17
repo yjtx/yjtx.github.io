@@ -5,8 +5,7 @@ layout: post
 title: Type Script 的类型
 pid: 12
 tags:
-- 博客
-- Type Script 的类型
+- ts
 ---
 
 ### 基础类型

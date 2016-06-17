@@ -5,8 +5,7 @@ layout: post
 title: egret 2.5 及以上输入框被盖住的规避方法
 pid: 31
 tags:
-- 博客
-- egret 2.5 及以上输入框被盖住的规避方法
+- egret
 ---
 
 * 去掉 index.html 中 html 的 css 的样式
