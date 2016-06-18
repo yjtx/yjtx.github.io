@@ -1,7 +1,7 @@
 <div class="tags" id="side_tags">
     <h2>标签</h2>
         {% for tag in site.tags %}
-                <a href="/navbar/tags.html#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                <a href="/other/tags.html#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                     {{ tag[0] }}
                 </a>
         {% endfor %}
