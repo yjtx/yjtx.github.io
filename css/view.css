@@ -54,6 +54,8 @@ _width:expression((document.documentElement.clientWidth||document.body.clientWid
 .line {height: 10px;overflow: hidden;width: 100%;margin: 10px 0;clear: both;border-bottom: 1px dashed #ccc;}
 
 
+article {border-right: #111 2px solid;}
+
 .view {font-size: 16px; background: #222;color:#a6a6a6;line-height: 1.7; width:630px}
 .view .row {margin: 16px; padding: 5px 0}
 .row h3 {font-size: 24px; font-weight: bold; line-height: 1.1;margin-top: 20px; margin-bottom: 10px;}
@@ -79,3 +81,7 @@ _width:expression((document.documentElement.clientWidth||document.body.clientWid
 .row ul {list-style: initial; padding-left: 40px}
 .row .pager { list-style: none; padding-left: 0px;}
 .row .tooltip {width: 150px;font-size:10px;text-align: center}
+
+.one-tag-list {font-size:12px;}
+.tag-list-title {font-size:24px; color: #ccc}
+

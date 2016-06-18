@@ -1,7 +1,7 @@
 function b(){
 	h = $(window).height();
 	t = $(document).scrollTop();
-	if(t > h){
+	if(t > 100){
 		$('#gotop').show();
 	}else{
 		$('#gotop').hide();

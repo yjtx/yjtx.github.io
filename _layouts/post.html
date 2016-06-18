@@ -2,18 +2,18 @@
 layout: new_page
 ---
 
-<!-- Image to hack wechat -->
-<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
-<!-- Post Header -->
-
-<!-- Post Content -->
 <article>
+    <div class="arrow_box">
+        <div class="ti"></div>
+        <!--三角形-->
+        <div class="ci"></div>
+        <!--圆形-->
+    </div>
     <div class="view">
         <div class="row">
-            <!--<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">-->
-
+			  	<span class="tag-list-title">{{ page.title }}</span>
+                </br>
+                </br>
 				{{ content }}
 
                 <ul class="pager">
@@ -28,8 +28,6 @@ layout: new_page
                     </li>
                     {% endif %}
                 </ul>
-
-            <!--</div>-->
         </div>
     </div>
 </article>
