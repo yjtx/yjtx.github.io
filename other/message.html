@@ -3,34 +3,6 @@ layout: new_page
 ---
 
 <article>
-    <div class="arrow_box">
-        <div class="ti"></div>
-        <!--三角形-->
-        <div class="ci"></div>
-        <!--圆形-->
-    </div>
-    <div class="view">
-        <div class="row">
-			  	<span class="tag-list-title">{{ page.title }}</span>
-                </br>
-                </br>
-				{{ content }}
-
-                <ul class="pager">
-                    {% if page.previous.url %}
-                    <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
-                    </li>
-                    {% endif %}
-                    {% if page.next.url %}
-                    <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
-                    </li>
-                    {% endif %}
-                </ul>
-        </div>
-    </div>
-
 
 	<div>
     <div class="arrow_box">
