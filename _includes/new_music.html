@@ -29,12 +29,13 @@
         count = count % array.length;
 
         init();
+
+        musicId.play();
     });
 
     musicId.addEventListener("timeupdate", function (e) {
         if (curretTime > musicId.currentTime) {
             lrcCount = 0;
-            musicId.play();
         }
         curretTime = musicId.currentTime;
 
@@ -95,8 +96,6 @@
             }
             initLrc();
         });
-
-        // musicId.play();
     }
     init();
 </script>
