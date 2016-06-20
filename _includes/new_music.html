@@ -3,8 +3,8 @@
         <dt class="art"><img id="iconId" src=""></dt>
         <dd id="songId" class="icon-song"></dd>
         <dd id="artistId" class="icon-artist"></dd>
-        <dd id="lrc1" style="color:#ff0000;height:24px;overflow:hidden"></dd>
-        <dd id="lrc2" style="height:24px;overflow:hidden;"></dd>
+        <dd id="lrc1" style="color:#ff0000;height:24px;overflow:hidden;line-height:12px"></dd>
+        <dd id="lrc2" style="height:24px;overflow:hidden;line-height:12px"></dd>
         <dd class="music">
             <audio id="musicId" src="" controls></audio>
         </dd>
@@ -48,8 +48,21 @@
         if (lrc.length) {
             var lrcinfo = lrc[lrcCount];
             lrc1.innerText = lrcinfo["m"];
+            if (lrcinfo["m"].length > 13) {
+                lrc1.style.lineHeight = "12px";
+            }
+            else {
+                lrc1.style.lineHeight = "24px";
+            }
+
             if (lrcCount < lrc.length - 1) {
                 lrc2.innerText = lrc[lrcCount+1]["m"];
+                if (lrc[lrcCount+1]["m"].length > 12) {
+                    lrc2.style.lineHeight = "12px";
+                }
+                else {
+                    lrc2.style.lineHeight = "24px";
+                }
             }
             else {
                 lrc2.innerText = "";
