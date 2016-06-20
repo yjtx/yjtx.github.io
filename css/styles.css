@@ -40,11 +40,11 @@ header nav ul li a:hover, #nav_current { color: #fff; background: rgba(20, 20, 2
 .linkmore { margin: 15px 0 0 15px }
 .linkmore li a { height: 50px; width: 50px; display: block; overflow: hidden; box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7); border-radius: 50%; float: left; margin:0 6px 6px; }
 .linkmore li a:hover { opacity: 0.5; -webkit-transform: rotate(30deg); -ms-transform: rotate(30deg); -moz-transform: rotate(30deg); -o-transform: rotate(30deg); transform: rotate(30deg); }
-.talk, .address, .email, .photos, .heart { background: url(../images/icons.png) no-repeat; }
+.talk, .address, .email, .photoes, .heart { background: url(../images/icons.png) no-repeat; }
 .talk { background-position: 13px 18px }
 .address { background-position: 12px -22px }
 .email { background-position: 12px -60px }
-.photos { background-position: 12px -137px }
+.photoes { background-position: 12px -137px }
 .heart { background-position: 13px -99px }
 .github{background: url(../images/github.png) no-repeat;}
 .weibo{background: url(../images/weibo.png) no-repeat;}
