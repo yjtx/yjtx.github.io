@@ -1,13 +1,89 @@
 <div class="viny">
     <dl>
-        <dt class="art"><img src="/images/ccnn.jpg" alt="专辑"></dt>
-        <dd class="icon-song"><span></span>匆匆那年</dd>
-        <dd class="icon-artist"><span></span>歌手：王菲</dd>
-        <!--<dd class="icon-album"><span></span>所属专辑：</dd>-->
-        <!--<dd class="icon-like"><span></span><a href="/">喜欢</a></dd>-->
+        <dt class="art"><img id="iconId" src="/sounds/ccnn.jpg"></dt>
+        <dd id="songId" class="icon-song">匆匆那年</dd>
+        <dd id="artistId" class="icon-artist">王菲</dd>
+        <dd id="lrc1" style="color:#ff0000;height:24px;overflow:hidden">歌词2</dd>
+        <dd id="lrc2" style="height:24px;overflow:hidden;">歌词3</dd>
         <dd class="music">
-            <audio src="/images/ccnn.mp3" controls></audio>
+            <audio id="musicId" src="/sounds/ccnn.mp3" controls></audio>
         </dd>
         <!--也可以添加loop属性 音频加载到末尾时，会重新播放-->
     </dl>
 </div>
+
+<script type="text/javascript" src="/js/getData.js"></script>
+<script>
+    var array = [];
+    array.push({"n":"王菲", "s":"匆匆那年","i":"/sounds/ccnn.jpg", "u":"/sounds/ccnn.mp3", "l":"/sounds/ccnn.lrc"});
+    array.push({"n":"邓丽君", "s":"漫步人生路","i":"/sounds/mmrsl.jpg", "u":"/sounds/mmrsl.mp3", "l":"/sounds/mmrsl.lrc"});
+    var musicId = document.getElementById("musicId");
+    var iconId = document.getElementById("iconId");
+    var songId = document.getElementById("songId");
+    var artistId = document.getElementById("artistId");
+    var lrc1 = document.getElementById("lrc1");
+    var lrc2 = document.getElementById("lrc2");
+    var count = 1;
+    musicId.addEventListener("ended", function () {
+        count++;
+        count = count % array.length;
+
+        init();
+    });
+
+    musicId.addEventListener("timeupdate", function (e) {
+        if (curretTime > musicId.currentTime) {
+            lrcCount = 0;
+            musicId.play();
+        }
+        curretTime = musicId.currentTime;
+
+        while (lrc.length && lrcCount + 1 < lrc.length && curretTime > lrc[lrcCount+1]["t"] - 0.1) {
+            lrcCount++;
+        }
+        initLrc();
+    });
+
+    function initLrc() {
+        if (lrc.length) {
+            var lrcinfo = lrc[lrcCount];
+            lrc1.innerText = lrcinfo["m"];
+            if (lrcCount < lrc.length - 1) {
+                lrc2.innerText = lrc[lrcCount+1]["m"];
+            }
+            else {
+                lrc2.innerText = "";
+            }
+        }
+    }
+
+    var curretTime = 0;
+    var lrc = [];
+    var lrcCount = 0;
+    function init() {
+        iconId.src = array[count]["i"] || "/images/ccnn.jpg";
+        songId.innerText = array[count]["s"];
+        artistId.innerText = array[count]["n"];
+        musicId.src = array[count]["u"];
+
+        lrc = [];
+        lrcCount = 0;
+        curretTime = 0;
+        getData(array[count]["l"], function (data) {
+            var s = data.split("\n");
+
+            for (var i = 0; i < s.length; i++) {
+                var t = s[i].match(/\[\d\d\:\d\d.\d\d\]/);
+                if (t) {
+                    var min = parseInt(t[0].substr(1, 2));
+                    var sec = parseFloat(t[0].substr(4, 5));
+                    lrc.push({t:min*60+sec, m: s[i].replace(t[0], "")});
+                }
+            }
+            initLrc();
+        });
+
+        musicId.play();
+    }
+    init();
+</script>
